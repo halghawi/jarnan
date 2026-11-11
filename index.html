@@ -8,7 +8,7 @@
 <style>
   :root {
     --green:#1a6b2f;--green-light:#2a9444;--green-dark:#082b12;
-    --pitch:#040e07;
+    --pitch:#0b2d18;
     --gold:#c9a227;--gold-light:#e8c24a;
     --white:#fff;--bg:#ffffff;--text:#111827;--text-muted:#4b5563;
     --card-bg:#fff;--border:#dce8dc;
@@ -26,8 +26,8 @@
   .nav-links button{background:none;border:none;color:rgba(255,255,255,.85);font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:600;padding:8px 14px;border-radius:8px;cursor:pointer;transition:var(--tr)}
   .nav-links button:hover{background:rgba(255,255,255,.12);color:#fff}
   .nav-links button.active{background:transparent;color:var(--gold);border-bottom:2px solid var(--gold);border-radius:0}
-  .login-btn{background:var(--gold)!important;color:var(--green-dark)!important;font-weight:700!important;padding:8px 20px!important}
-  .login-btn:hover{background:var(--gold-light)!important}
+  .login-btn{background:transparent!important;color:rgba(255,255,255,.72)!important;font-weight:600!important;padding:5px 14px!important;border:1.5px solid rgba(255,255,255,.32)!important;border-radius:20px!important;font-size:.82rem!important}
+  .login-btn:hover{background:rgba(255,255,255,.13)!important;color:#fff!important}
 
   .page{display:none;animation:fadeIn .3s ease}
   .page.active{display:block}
@@ -69,7 +69,7 @@
   .hsoc-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
   .hsoc-fb{background:#1877f2}
   .hsoc-x{background:#000}
-  .hsoc-yt{background:#222}
+  .hsoc-yt{background:#ff0000}
   .hsoc-yt svg polygon{fill:#fff}
   .hsoc-icon:hover{transform:scale(1.15)}
   .section{max-width:1200px;margin:0 auto;padding:56px 24px}
@@ -236,12 +236,16 @@
 
   .import-hint{background:#f0f9f3;border:1px solid var(--green);border-radius:12px;padding:16px;font-size:.88rem;color:var(--green-dark);margin-bottom:20px;display:flex;align-items:flex-start;gap:10px}
 
-  @media(max-width:768px){
-    .nav-links button:not(.login-btn){display:none}
+  @media(max-width:1100px){
     .hero h1{font-size:2rem}
     .hero-stats{gap:20px}
     .modal{padding:24px}
     .hero-socials{gap:8px}
+  }
+  /* Compact desktop nav — keep all items in one row */
+  @media(min-width:1101px){
+    .nav-links{gap:2px}
+    .nav-links button:not(.login-btn):not(.lang-btn){padding:7px 10px;font-size:.81rem}
   }
 
   /* ===== BILINGUAL / LANGUAGE TOGGLE ===== */
@@ -271,7 +275,7 @@
   .hamburger-btn.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
   .hamburger-btn.open span:nth-child(2){opacity:0}
   .hamburger-btn.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-  @media(max-width:768px){
+  @media(max-width:1100px){
     .hamburger-btn{display:flex}
     .nav-links{display:none;position:absolute;top:100%;right:0;left:0;background:var(--green-dark);flex-direction:column;padding:12px 16px 20px;gap:4px;z-index:199;box-shadow:0 8px 24px rgba(0,0,0,.2)}
     .nav-links.open{display:flex}
@@ -369,14 +373,16 @@
         <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </a>
       <a href="https://t.co/WLdbpflMvl" target="_blank" title="يوتيوب" class="hsoc-icon hsoc-yt">
-        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#ff0000"/></svg>
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
       </a>
     </div></div>
   <div class="section">
     <div id="home-match-preview" style="display:none;margin-bottom:28px"></div>
-    <h2 class="section-title">📰 آخر الأخبار</h2>
+    <div id="news-section-wrap">
+    <h2 class="section-title" data-i18n="titleNews">📰 آخر الأخبار</h2>
     <div class="cards-grid" id="news-cards"></div>
     <div class="divider"></div>
+    </div>
     <h2 class="section-title">🏆 أبرز الإنجازات</h2>
     <div id="recent-achievements"></div>
     <div style="text-align:center;margin-top:20px">
@@ -785,6 +791,7 @@ function navigate(page){
   const nb=document.getElementById('nav-'+page);
   if(nb)nb.classList.add('active');
   renderPage(page);
+  if(typeof applyLang==='function')applyLang();
   window.scrollTo(0,0);
 }
 function renderPage(p){
@@ -802,9 +809,11 @@ function renderPage(p){
 // HOME
 function renderHome(){
   const news=DB.get('news',[]);
+  const newsWrap=document.getElementById('news-section-wrap');
   if(news.length===0){
-    document.getElementById('news-cards').innerHTML='<div style="text-align:center;padding:30px 0;color:var(--text-light);grid-column:1/-1" data-i18n="noNews">لا توجد أخبار حالياً</div>';
+    if(newsWrap)newsWrap.style.display='none';
   } else {
+    if(newsWrap)newsWrap.style.display='';
     document.getElementById('news-cards').innerHTML=news.map(n=>`
       <div class="card" style="cursor:default">
         <div class="card-icon">${n.icon||'📰'}</div>
@@ -838,6 +847,9 @@ function renderHome(){
     const yw=document.getElementById('hstat-year-wrap');
     if(yw)yw.classList.remove('hero-stat-hidden');
   }
+  // Hide stats row entirely when all values are zero/empty
+  const statsRow=document.getElementById('hero-stats-row');
+  if(statsRow){const anyVis=achCount||parCount||memCount||foundYear;statsRow.style.display=anyVis?'':'none';}
   // Show upcoming match on homepage
   const matches=DB.get('matches',[]);
   const upcoming=matches.filter(m=>m.status==='upcoming').sort((a,b)=>a.date>b.date?1:-1)[0];
